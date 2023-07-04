@@ -1,0 +1,81 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title font-semibold mb-3">Artikel</h3>
+    <form class="row g-3">
+      <div class="col-md-8">
+        <label for="product-name" class="form-label">Produktname</label>
+        <input
+          type="text"
+          class="form-control"
+          id="product-name"
+          name="product-name"
+          required
+        />
+        <div class="invalid-feedback">Produktname fehlt!</div>
+      </div>
+      <div class="col-md-8">
+        <label for="supplier-id" class="form-label">Lieferant-ID</label>
+        <select
+          class="form-select"
+          id="supplier-id"
+          name="supplier-id"
+          required
+        >
+          <!-- Hier die Optionen für die Lieferanten einfügen -->
+        </select>
+      </div>
+      <div class="col-md-8">
+        <label for="category-id" class="form-label">Kategorie-ID</label>
+        <select
+          class="form-select"
+          id="category-id"
+          name="category-id"
+          required
+        >
+          <!-- Hier die Optionen für die Kategorien einfügen -->
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="quantity-per-unit" class="form-label"
+          >Menge pro Einheit</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="quantity-per-unit"
+          name="quantity-per-unit"
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="unit-price" class="form-label">Einzelpreis</label>
+        <input
+          type="number"
+          class="form-control"
+          id="unit-price"
+          name="unit-price"
+          min="0"
+        />
+      </div>
+      <div class="col-md-4">
+        <label for="reorder-level" class="form-label">Nachbestellgrenze</label>
+        <input
+          type="number"
+          class="form-control"
+          id="reorder-level"
+          name="reorder-level"
+          min="0"
+        />
+      </div>
+      <div class="col-md-12 my-4 ms-2 form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="discontinued"
+          name="discontinued"
+        />
+        <label class="form-check-label" for="discontinued ">Auslaufend</label>
+      </div>
+      <button type="submit " class="btn btn-primary">Absenden</button>
+    </form>
+  </div>
+</div>

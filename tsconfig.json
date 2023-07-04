@@ -1,0 +1,38 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    // Source code
+    "lib": ["ES2023", "dom"],
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+
+    // Target
+    "target": "ES2022",
+    "module": "ES2022",
+
+    // Bundler / Compiler
+    "outDir": "./dist/out-tsc",
+    "declaration": false,
+    "downlevelIteration": true,
+    "importHelpers": true, // needs tslib
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "useDefineForClassFields": false,
+
+    // DX
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

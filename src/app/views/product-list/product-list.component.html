@@ -1,0 +1,39 @@
+<h2 class="display-6 fw-semibold">Artikel-Liste</h2>
+<div>
+  <label>
+    <span>Kategorie:</span>
+    <select
+      #category
+      (change)="changeCategory(category.value)"
+      class="form-select mt-2"
+      aria-label="Kategorie Filter"
+    >
+      <option *ngFor="let c of categories" [value]="c.categoryID">
+        {{ c.categoryName }}
+      </option>
+    </select>
+  </label>
+</div>
+<table class="table mt-4 caption-top">
+  <caption>
+    {{
+      selectedCategory.description
+    }}
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Produktname</th>
+      <th scope="col">Einheit</th>
+      <th scope="col">Preis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of filteredProducts">
+      <th scope="row">{{ p.id }}</th>
+      <td>{{ p.name }}</td>
+      <td>{{ p.quantityPerUnit }}</td>
+      <td>{{ p.unitPrice | currency }}</td>
+    </tr>
+  </tbody>
+</table>

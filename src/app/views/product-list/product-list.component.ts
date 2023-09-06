@@ -982,9 +982,9 @@ export class ProductListComponent {
 
   changeCategory(id: string) {
     const categoryId = Number(id);
-    this.selectedCategory = this.categories.find(
-      (c) => c.categoryID === categoryId
-    )!;
+    this.selectedCategory =
+      this.categories.find((c) => c.categoryID === categoryId) ||
+      this.categories[0];
     this.filteredProducts = this.products
       .filter((p) => p.categoryId === this.selectedCategory.categoryID)
       .sort((a, b) => a.id - b.id);
